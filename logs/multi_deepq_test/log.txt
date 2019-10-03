@@ -1,0 +1,1 @@
+Logging to /home/changmin/Projects/LogisticGym/logs/multi_deepq_test

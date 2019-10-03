@@ -2,7 +2,8 @@ import pyglet
 import random
 import numpy as np
 
-pyglet.resource.path = ["/Users/ichangmin/PycharmProjects/LogisticEnv/resources"]
+# pyglet.resource.path = ["/Users/ichangmin/PycharmProjects/LogisticEnv/resources"]
+pyglet.resource.path = ["/home/changmin/Projects/LogisticGym/resources"]
 
 
 def resize_image(image, size=(50, 50)):
@@ -33,9 +34,8 @@ class Palette:
         self.intersection = 0
         self.intersection_check = True
         self.is_moving = False
-        self.inspection_time = random.randint(6, 15)
+        self.inspection_time = random.randint(6, 10)
         self.prev_move = [0., 0.]
-
 
         Palette.all.append(self)
 
@@ -47,7 +47,7 @@ class Palette:
         self.intersection = 0
         self.intersection_check = True
         self.is_moving = False
-        self.inspection_time = random.randint(6, 15)
+        self.inspection_time = random.randint(6, 10)
         self.prev_move = [0., 0.]
 
 
@@ -111,7 +111,7 @@ class Unit:
     def __init__(self, pos_x, pos_y, is_inspector=False, batch=None):
         self.id = Unit.id
         Unit.id += 1
-        image = pyglet.resource.image("palette_white.png")
+        image = pyglet.resource.image("unit.png")
         resize_image(image, (10, 10))
         self.sprite = pyglet.sprite.Sprite(image, x=pos_x, y=pos_y, batch=batch)
 
