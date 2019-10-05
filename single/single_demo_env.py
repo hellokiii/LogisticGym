@@ -77,7 +77,8 @@ class DemoEnv(gym.Env):
         return np.array(state)
 
     def step(self, action):
-        # print(action)
+        print("Action:", action)
+
         action = [action]
 
         reward = 0
@@ -179,11 +180,7 @@ if __name__ == '__main__':
     env = DemoEnv()
     obs = env.reset()
 
-
-
-
     while True:
-
         obs, rewards, done, info = env.step(env.k_action)
         # pyglet.clock.tick()
         # game_window.switch_to()

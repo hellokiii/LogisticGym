@@ -2,7 +2,8 @@ from baselines.common import plot_util as pu
 import matplotlib.pyplot as plt
 import numpy as np
 
-results = pu.load_results('logs/single_deepq_092901')
+num = input()
+results = pu.load_results('logs/single_ppo_092901')
 
 
 r = results[0]

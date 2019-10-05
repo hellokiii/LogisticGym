@@ -21,7 +21,7 @@ class Palette:
     all = []
     id = 0
 
-    def __init__(self, pos_x, pos_y, image_name="palette.png", batch=None):
+    def __init__(self, pos_x, pos_y, image_name="palette.png", is_obstacle=False, batch=None):
         self.id = Palette.id
         Palette.id += 1
 
@@ -40,6 +40,7 @@ class Palette:
 
         self.k_action = 0
 
+        self.is_obstacle = is_obstacle
 
         Palette.all.append(self)
 
